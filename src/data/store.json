@@ -1,0 +1,449 @@
+{
+  "profile": {
+    "name": "Nathumini Jayathilake",
+    "initials": "NJ",
+    "headline": "Final Year Computer Science Undergraduate | Aspiring Data Scientist | Data Analytics | AI & Machine Learning Enthusiast",
+    "roles": [
+      "Final Year CS Undergraduate",
+      "Aspiring Data Scientist",
+      "Machine Learning Enthusiast",
+      "Data Analytics Explorer"
+    ],
+    "location": {
+      "city": "Kandy",
+      "region": "Central Province",
+      "country": "Sri Lanka"
+    },
+    "university": {
+      "name": "University of Staffordshire",
+      "institute": "APIIT Sri Lanka"
+    },
+    "about": "I am a Final Year Computer Science undergraduate at the University of Staffordshire (APIIT Sri Lanka) with a strong interest in Data Analytics, Data Science, and Machine Learning.\n\nI enjoy transforming raw data into meaningful insights that support better decision-making. Through academic and personal projects, I have gained experience in data analysis, predictive modeling, machine learning, and data visualization using Python, SQL, Pandas, Scikit-learn, and Power BI.\n\nMy recent work includes developing a machine learning-based decision analytics solution for electricity demand risk forecasting and generation planning support, applying analytical techniques to solve real-world business problems.\n\nI am currently seeking opportunities to apply and further develop my skills in Data Analytics, Business Intelligence, and Data Science within professional environments.",
+    "aboutJourney": [
+      {
+        "year": "2023",
+        "title": "Foundation in Computer Science",
+        "description": "Started my academic journey at APIIT Sri Lanka, building a strong foundation in computing and programming principles."
+      },
+      {
+        "year": "2024",
+        "title": "Data Analytics & Web Development",
+        "description": "Deepened my expertise in Data Analytics using Python, SQL, and Power BI. Built full-stack web applications and explored mobile development."
+      },
+      {
+        "year": "2025",
+        "title": "Machine Learning & Leadership",
+        "description": "Applied ML techniques to real-world problems. Took on leadership roles as Committee Member, Student Trainer, and Cohort Leader at APIIT."
+      },
+      {
+        "year": "2026",
+        "title": "National Recognition",
+        "description": "Named Top 15 National Finalist at Hult Prize Sri Lanka."
+      }
+    ],
+    "currently": "Building my portfolio & exploring ML pipelines",
+    "repository": "https://github.com/NathuminiJ/Nathumini_Portfolio_Web",
+    "social": {
+      "linkedin": "www.linkedin.com/in/nathumini-jayathilake-b897a5331",
+      "github": "https://github.com/NathuminiJ",
+      "email": "nathuminijayathilake@outlook.com"
+    }
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Peak Demand Risk Forecasting and Generation Planning Support for CEB",
+      "shortTitle": "Demand Forecasting for CEB",
+      "description": "Developed a Decision Analytics solution for the Ceylon Electricity Board to support peak electricity demand forecasting and generation planning.",
+      "details": "Conducted EDA on electricity demand, weather, and generation data. Built a Random Forest ML model to classify peak-demand risk levels (Low, Medium, High). Used Python, Pandas, Scikit-learn, and Data Visualization. Achieved 68.48% classification accuracy. Designed a decision-support framework for risk identification and generation scheduling.",
+      "technologies": [
+        "Python",
+        "Pandas",
+        "Scikit-learn",
+        "SQL",
+        "Data Visualization"
+      ],
+      "period": "Apr 2026 – Jun 2026",
+      "category": "Machine Learning",
+      "image": "",
+      "link": "",
+      "documents": [
+        {
+          "label": "CEB Report",
+          "url": "/uploads/1784693761177.pdf"
+        },
+        {
+          "label": "CEB Presentation",
+          "url": "/uploads/1784693766789.pptx"
+        }
+      ],
+      "images": [
+        "/uploads/1784696686184.png"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Mahamaya Girls' College Senior Science Society Website",
+      "shortTitle": "Science Society Website",
+      "description": "Official website for the Senior Science Society with admin dashboard for managing events, achievements, and research publications.",
+      "details": "Built with Next.js App Router, Firebase Auth & Storage, and Cloudinary. Features include dynamic admin dashboard, research paper management (search, filtering, uploads), responsive UI, SEO optimization, and secure file handling.",
+      "technologies": [
+        "Next.js",
+        "Firebase",
+        "Cloudinary",
+        "Tailwind CSS"
+      ],
+      "period": "Feb 2026 – Mar 2026",
+      "category": "Web Development",
+      "image": "",
+      "link": "https://www.mayanzsci.org.lk",
+      "images": [
+        "/uploads/1784693836162.jpg",
+        "/uploads/1784693841216.jpg",
+        "/uploads/1784693844653.jpg",
+        "/uploads/1784693847439.jpg",
+        "/uploads/1784693850793.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "HappyPaws – Full-Stack Android Mobile Application",
+      "shortTitle": "HappyPaws Android App",
+      "description": "Full-stack Android pet supply shopping app built with Kotlin, Jetpack Compose, and Material Design 3.",
+      "details": "Features MVVM architecture, Retrofit networking with Coroutines, product browsing with category filtering, cart management, checkout, user authentication, and sensor integration (gyroscope, camera, battery status). PHP backend with RESTful APIs.",
+      "technologies": [
+        "Kotlin",
+        "Jetpack Compose",
+        "PHP",
+        "MySQL"
+      ],
+      "period": "Jul 2025 – Oct 2025",
+      "category": "Mobile Development",
+      "image": "",
+      "link": "https://github.com/NathuminiJ/HappyPawsFinalApp",
+      "images": [
+        "/uploads/1784693943737.jpg",
+        "/uploads/1784693947368.jpg",
+        "/uploads/1784693950243.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "HappyPaws – Full-Stack E-Commerce Web Application",
+      "shortTitle": "HappyPaws Web App",
+      "description": "Complete full-stack e-commerce system built with Laravel 11, MySQL, and MongoDB.",
+      "details": "MVC architecture with RESTful APIs for auth, products, cart, orders, and payments. Dual database integration: MySQL for relational data, MongoDB for feedback/reviews. Role-based dashboards for admin and customers. HTTPS-secured deployment via Ngrok.",
+      "technologies": [
+        "Laravel",
+        "PHP",
+        "MySQL",
+        "MongoDB",
+        "Tailwind CSS"
+      ],
+      "period": "Jul 2025 – Oct 2025",
+      "category": "Web Development",
+      "image": "",
+      "link": "https://www.linkedin.com/safety/go/?url=https%3A%2F%2Fgithub.com%2FNathuminiJ%2Fhappy-paws-store&urlhash=wINM&mt=xmU1XcOdT1hiSUPkypJdJKIFq5l4U3eDesI1KPOF8fdGDoiDaVLvYxyQugojht1pfJ1q4AxCAIrbtSuShYsLUXk2wPQE&isSdui=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_media_list%3BJ3Ynz1rTTbe%2BijBEsMQwmQ%3D%3D",
+      "images": [
+        "/uploads/1784694841302.jpg",
+        "/uploads/1784694844535.jpg",
+        "/uploads/1784694847348.jpg",
+        "/uploads/1784694850541.jpg",
+        "/uploads/1784694853377.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Fix-It – Emergency Technician Booking App",
+      "shortTitle": "Fix-It App",
+      "description": "Mobile app prototype for booking trusted technicians during emergencies. Role: UI/UX Designer.",
+      "details": "Designed in Figma with role-based onboarding (Customer, Technician, Admin), live technician tracking, in-app payment, and admin dashboard. User-centered design approach with real-time scenario mapping.",
+      "technologies": [
+        "Figma",
+        "UI/UX Design",
+        "Prototyping"
+      ],
+      "period": "Jul 2025 – Aug 2025",
+      "category": "UI/UX Design",
+      "image": "",
+      "link": "https://www.figma.com/proto/ms72Xn1J2UMKKSLbG2F0vn/Fix-It-App-UIs?node-id=47-78&t=ZKKHiY0p3AAJ4CD6-1",
+      "documents": [],
+      "images": [
+        "/uploads/1784696604550.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Sports Event Management System",
+      "shortTitle": "Sports Management",
+      "description": "Desktop application for managing sports events built with C# and Microsoft SQL Server.",
+      "details": "Features user registration, team management, match scheduling, score tracking, and result generation. Applied OOP principles (encapsulation, inheritance, polymorphism) for modular and scalable system design.",
+      "technologies": [
+        "C#",
+        ".NET Framework",
+        "MSSQL"
+      ],
+      "period": "Jul 2024 – Oct 2024",
+      "category": "Desktop Development",
+      "image": "",
+      "images": [
+        "/uploads/1784697728601.png"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Green Grocers Super Market Further Development",
+      "shortTitle": "Green Grocers v2",
+      "description": "Enhanced e-commerce functionality added to a supermarket website with cart, favourites, and checkout.",
+      "details": "Added Add to Cart, Add to Favourites, and demo checkout system using JavaScript and JSON. Built upon a responsive website with product categorization, promotional banners, dynamic search/filtering, and wireframe-driven UI/UX.",
+      "technologies": [
+        "JavaScript",
+        "JSON",
+        "HTML/CSS"
+      ],
+      "period": "Jul 2024 – Oct 2024",
+      "category": "Web Development",
+      "image": "",
+      "link": "https://nathuminij.github.io/GG-SUPER/",
+      "images": [
+        "/uploads/1784697403118.jpg",
+        "/uploads/1784697408078.jpg"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Green Grocers Super Market",
+      "shortTitle": "Green Grocers v1",
+      "description": "Responsive supermarket website built with HTML, CSS, and JavaScript as an introductory web project.",
+      "details": "Designed wireframes for intuitive UI/UX. Included product categories, promotional banners, dynamic search, and filtering features to improve customer engagement.",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Responsive Design"
+      ],
+      "period": "Feb 2024 – Jun 2024",
+      "category": "Web Development",
+      "image": "",
+      "images": [
+        "/uploads/1784697223402.jpg",
+        "/uploads/1784697227071.jpg",
+        "/uploads/1784697229884.jpg",
+        "/uploads/1784697232566.jpg"
+      ],
+      "link": "https://www.linkedin.com/safety/go/?url=https%3A%2F%2Fnathuminij.github.io%2FGreen-Grocers-final-web%2F&urlhash=I9D6&mt=67h_OK9o6RNK-9cYHxtVkai2XvvfyKonBmDgf2Tw2EORGc3E-ZdFgMnyvfI9ggR-hWzodPt4W1fD0rQIdf8VZQ4fI-8_&isSdui=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_media_list%3BUn%2BROD4zTGKM6n3wrnSGSg%3D%3D"
+    }
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "role": "Committee Member",
+      "organization": "APIIT Computer Society",
+      "period": "Sep 2025 – Present",
+      "description": "Active role in promoting technology, innovation, and collaboration within the student community. Planning and executing tech events and workshops, supporting society initiatives, and encouraging student participation in computing and digital innovation.",
+      "skills": [
+        "Student Engagement",
+        "Teamwork",
+        "Event Coordination"
+      ]
+    },
+    {
+      "id": 2,
+      "role": "Student Trainer",
+      "organization": "APIIT Sri Lanka",
+      "period": "Jul 2025 – Present",
+      "description": "Lead interactive sessions for the Gen Z Guide to Life workshop series focusing on personal growth, mindset development, and self-leadership. Design and deliver engaging activities promoting participation, reflection, and meaningful discussion.",
+      "skills": [
+        "Communication",
+        "Leadership",
+        "Facilitation",
+        "Public Speaking"
+      ]
+    },
+    {
+      "id": 3,
+      "role": "Cohort Leader",
+      "organization": "APIIT Sri Lanka",
+      "period": "Jun 2025 – Apr 2026",
+      "description": "Support new and continuing students in adapting to university life. Guide students through the university environment and contribute to planning orientation programs, club festivals, workshops, and engagement events.",
+      "skills": [
+        "Leadership",
+        "Teamwork",
+        "Event Coordination",
+        "Mentoring"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "BSc (Hons)  Computer Science",
+      "university": "University of Staffordshire",
+      "institute": "APIIT Sri Lanka",
+      "period": "Feb 2024 – Feb 2027",
+      "highlights": [
+        "Data Analytics specialization",
+        "Machine Learning coursework",
+        "Capstone: CEB Demand Forecasting"
+      ]
+    },
+    {
+      "degree": "Computing Foundation",
+      "university": "Asia Pacific University of Technology and Innovation",
+      "institute": "APIIT Sri Lanka",
+      "period": "Jul 2023 – Jan 2024",
+      "highlights": [
+        "Research Skills",
+        "Analytical Skills",
+        "Programming Fundamentals"
+      ]
+    }
+  ],
+  "skills": [
+    "Python",
+    "SQL",
+    "Power BI",
+    "Machine Learning",
+    "Data Analysis",
+    "Data Visualization",
+    "Pandas",
+    "Scikit-learn",
+    "Database Management",
+    "Business Intelligence",
+    "Next.js",
+    "Tailwind CSS",
+    ".NET Framework",
+    "Kotlin",
+    "Jetpack Compose",
+    "Laravel",
+    "PHP",
+    "JavaScript",
+    "HTML & CSS",
+    "Git & GitHub",
+    "Figma",
+    "Agile & Scrum"
+  ],
+  "certifications": [
+    {
+      "name": "Python for Beginners",
+      "issuer": "University of Moratuwa",
+      "year": "Nov 2025",
+      "link": "https://www.linkedin.com/safety/go/?url=https%3A%2F%2Fopen.uom.lk%2Fverify&urlhash=D9q1&mt=ny7khSrzObtCz-hGHHsxEV1njAdn5leBPXGlQCGBqiNcI8595Ep5o25qt-ndx92eJG6OxqieqD0JLJGsq8XpgdvYtzON&isSdui=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B5MrGAyLsRqKWZmE4eAfYNw%3D%3D"
+    },
+    {
+      "name": "Data Engineering Foundations",
+      "issuer": "LinkedIn",
+      "year": "Nov 2025",
+      "link": "https://www.linkedin.com/learning/certificates/7dfdbaa885ceba2bdaf46d74e8e21c72b98a02eefdea3aa81c16756a6f42eea1/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B5MrGAyLsRqKWZmE4eAfYNw%3D%3D"
+    },
+    {
+      "name": "Agile Software Development: Refactoring",
+      "issuer": "LinkedIn",
+      "year": "Sep 2025",
+      "link": "https://www.linkedin.com/learning/certificates/a3cb8fffb87af70f0bda74c254e8d9b156dc4c1c6aeec5422fdb8c7d4f94787b/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B5MrGAyLsRqKWZmE4eAfYNw%3D%3D"
+    },
+    {
+      "name": "Introduction to Dart",
+      "issuer": "LinkedIn",
+      "year": "Oct 2025",
+      "link": "https://www.linkedin.com/learning/certificates/1386f284114d48db7e7a9fb9c6e38d0502d9f1b4d071e815eacd8086d879f729/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B5MrGAyLsRqKWZmE4eAfYNw%3D%3D"
+    },
+    {
+      "name": "Python in Excel",
+      "issuer": "LinkedIn",
+      "year": "Nov 2025",
+      "link": "https://www.linkedin.com/learning/certificates/9c7da28ef223ed447ee542d9e214d4164e803e7d89aeb1385f267b97a2d46c2c/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B5MrGAyLsRqKWZmE4eAfYNw%3D%3D"
+    },
+    {
+      "name": "Scrum: The Basics",
+      "issuer": "LinkedIn",
+      "year": "Sep 2025",
+      "link": "https://www.linkedin.com/learning/certificates/8a20e48739c86ca3e498dd1a96d4c80d97fcee3cee5d7ee8b7017cdc7c571d37/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B5MrGAyLsRqKWZmE4eAfYNw%3D%3D"
+    },
+    {
+      "name": "Becoming an Agile Leader",
+      "issuer": "LinkedIn",
+      "year": "Sep 2025",
+      "link": "https://www.linkedin.com/learning/certificates/36c3b22724f7e700faef2455a3c5b65657afc94e5cb8a4b1b34a9c5a9f715f45/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B5MrGAyLsRqKWZmE4eAfYNw%3D%3D"
+    },
+    {
+      "name": "Data Science Foundations: Knowledge Graphs",
+      "issuer": "LinkedIn",
+      "year": "Sep 2025",
+      "link": "https://www.linkedin.com/learning/certificates/e3f0ff4af0c6c0d572e9872beddc921f08ca2149e6fc4ff0dacf5b5f16058b8a/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B5MrGAyLsRqKWZmE4eAfYNw%3D%3D"
+    },
+    {
+      "name": "NoSQL Essential Training",
+      "issuer": "LinkedIn",
+      "year": "Aug 2025",
+      "link": "https://www.linkedin.com/learning/certificates/9a9bb92ae7aa95f9dd93e413564874435de12aac72e1e283febffbd0bcdff415/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B5MrGAyLsRqKWZmE4eAfYNw%3D%3D"
+    },
+    {
+      "name": "Power BI: Dashboards for Beginners",
+      "issuer": "LinkedIn",
+      "year": "May 2025",
+      "link": "https://www.linkedin.com/learning/certificates/800ce47738eb2e4c62d0c3e8d9d89dcb309f057330c72090145e88c9b2ef99e1/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B5MrGAyLsRqKWZmE4eAfYNw%3D%3D"
+    },
+    {
+      "name": "Data Visualization in Python with Dash",
+      "issuer": "LinkedIn",
+      "year": "May 2025",
+      "link": "https://www.linkedin.com/learning/certificates/e56d423dc375420bb5870fddce724fbbc3430dd00964e74cf33f987535dc3cc3/?trk=share_certificate&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B5MrGAyLsRqKWZmE4eAfYNw%3D%3D"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "National Finalist (Top 15)",
+      "event": "Hult Prize Sri Lanka Nationals 2026",
+      "year": "2026",
+      "description": "Competed with team 'Syntax Squad' to place among the Top 15 National Finalists. Recognized for developing innovative solutions and presenting to a panel of expert judges."
+    }
+  ],
+  "volunteering": [
+    {
+      "organization": "Sri Lanka Girl Guides Association",
+      "role": "President Guide",
+      "period": "Jul 2025 – Present",
+      "description": "Leading guiding activities and mentoring fellow members."
+    },
+    {
+      "organization": "Rotaract Club of Kandy Hill Capital",
+      "role": "Member",
+      "period": "Apr 2025 – Nov 2025",
+      "description": "Participating in community service projects and social initiatives."
+    },
+    {
+      "organization": "Interact Club of Girl's High School Kandy",
+      "role": "PR Committee Member",
+      "period": "Jan 2022 – Apr 2023",
+      "description": "Managed public relations and communications for club activities."
+    },
+    {
+      "organization": "Sri Lanka Girl Guides Association",
+      "role": "Girl Guide",
+      "period": "Jan 2017 – Jun 2025",
+      "description": "Developed leadership skills through guiding activities and community service over 8 years."
+    }
+  ],
+  "articles": [
+    {
+      "title": "How Data Analytics Drives Better Business Decisions",
+      "date": "2025",
+      "excerpt": "Exploring how organizations leverage data analytics to transform raw information into strategic business decisions.",
+      "tags": [
+        "Data Analytics",
+        "Business Intelligence"
+      ],
+      "link": "https://www.linkedin.com/posts/nathumini-jayathilake-b897a5331_dataanalytics-datascience-businessintelligence-ugcPost-7471083619269246976-C_Zd/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFOWtlkB0fusGducU2k5K3jLXHoQDr7Hoj4"
+    },
+    {
+      "title": "The \"So What?\" Test",
+      "date": "2025",
+      "excerpt": "A framework for ensuring data insights translate into meaningful action and measurable business impact.",
+      "tags": [
+        "Data Science",
+        "Critical Thinking"
+      ],
+      "link": "https://www.linkedin.com/posts/nathumini-jayathilake-b897a5331_dataanalytics-datastorytelling-problemsolving-share-7472617479136051200-pYU1/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFOWtlkB0fusGducU2k5K3jLXHoQDr7Hoj4"
+    }
+  ]
+}
