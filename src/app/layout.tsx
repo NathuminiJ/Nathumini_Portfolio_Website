@@ -60,6 +60,10 @@ export const metadata: Metadata = {
     description:
       "Final Year Computer Science Undergraduate | Aspiring Data Scientist | AI & Machine Learning Enthusiast",
   },
+  icons: {
+    icon: "/LOGO.png",
+    apple: "/LOGO.png",
+  },
   robots: {
     index: true,
     follow: true,
@@ -83,10 +87,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <head>
-        <link rel="icon" href="/LOGO.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/LOGO.png" />
-      </head>
+
       <body className="min-h-full bg-[#f8f7f5] text-[#1a1a1a]">
         <ClientLayout>{children}</ClientLayout>
       </body>
