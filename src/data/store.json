@@ -232,6 +232,39 @@
         "/uploads/1784697232566.jpg"
       ],
       "link": "https://www.linkedin.com/safety/go/?url=https%3A%2F%2Fnathuminij.github.io%2FGreen-Grocers-final-web%2F&urlhash=I9D6&mt=67h_OK9o6RNK-9cYHxtVkai2XvvfyKonBmDgf2Tw2EORGc3E-ZdFgMnyvfI9ggR-hWzodPt4W1fD0rQIdf8VZQ4fI-8_&isSdui=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_media_list%3BUn%2BROD4zTGKM6n3wrnSGSg%3D%3D"
+    },
+    {
+      "images": [
+        "/uploads/1784709451559.jpg"
+      ],
+      "documents": [
+        {
+          "label": "AIRGUARD Presentation",
+          "url": "/uploads/1784709353743.pdf"
+        }
+      ],
+      "shortTitle": "AirGuard",
+      "title": "AirGuard – AI-Powered Smart Air Quality Monitoring and Prediction System",
+      "description": "AI-powered IoT air quality monitoring platform that collects hyperlocal environmental data and predicts future air quality conditions to support smarter travel and healthier decision-making.",
+      "details": "Developed an AI and IoT-based air quality intelligence platform combining real-time sensor data, weather information, and machine learning for short-term AQI prediction.\n\nDesigned the complete data pipeline including sensor data collection, preprocessing, dataset preparation, feature engineering, and machine learning model development. Implemented a Random Forest-based prediction approach to forecast air quality trends and risk levels.\n\nThe system integrates ESP32-based edge data collection, ThingSpeak communication, PostgreSQL with TimescaleDB for time-series storage, Python-based AI processing, and a Next.js API connected with a Flutter mobile application.\n\nAirGuard provides hyperlocal air quality insights, future AQI predictions, and intelligent recommendations to support tourists, communities, and organizations in making safer, data-driven decisions.",
+      "period": "Jun 2026 – Jul 2026",
+      "category": "Artificial Intelligence / IoT",
+      "link": "",
+      "technologies": [
+        "Python",
+        "Machine Learning",
+        "Scikit-learn",
+        "Pandas",
+        "ESP32",
+        "IoT",
+        "ThingSpeak",
+        "PostgreSQL",
+        "TimescaleDB",
+        "Next.js",
+        "Flutter",
+        "Data Visualization"
+      ],
+      "id": 11
     }
   ],
   "experience": [
