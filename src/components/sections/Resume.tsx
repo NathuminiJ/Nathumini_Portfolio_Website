@@ -13,20 +13,26 @@ export default function Resume() {
   const [form, setForm] = useState({ name: "", email: "", message: "" })
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
+  const [error, setError] = useState("")
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!form.name || !form.email) return
     setSending(true)
+    setError("")
     try {
-      await fetch("/api/cv-request", {
+      const res = await fetch("/api/cv-request", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       })
+      if (!res.ok) {
+        const data = await res.json()
+        throw new Error(data.error || "Request failed")
+      }
       setSent(true)
-    } catch {
-      alert("Something went wrong. Please try emailing directly.")
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try emailing directly.")
     }
     setSending(false)
   }
@@ -69,6 +75,7 @@ export default function Resume() {
                 className="w-full rounded-lg border border-[rgba(212,165,85,0.08)] bg-[rgba(14,14,24,0.4)] px-3 py-2.5 text-sm text-[#e8e8f0] placeholder-[#5a5a6a] outline-none focus:border-[#d4a555]/30 transition-colors" />
               <textarea placeholder="Brief message (optional)" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} rows={3}
                 className="w-full rounded-lg border border-[rgba(212,165,85,0.08)] bg-[rgba(14,14,24,0.4)] px-3 py-2.5 text-sm text-[#e8e8f0] placeholder-[#5a5a6a] outline-none focus:border-[#d4a555]/30 transition-colors" />
+              {error && <p className="text-xs text-red-400">{error}</p>}
               <button type="submit" disabled={sending}
                 className="btn-primary w-full justify-center">
                 {sending ? "Sending..." : "Request CV"} <Send size={14} />

@@ -18,21 +18,67 @@ async function saveRequests(requests: any[]) {
   await writeFile(requestsFile, JSON.stringify(requests, null, 2))
 }
 
+async function sendEmailNotification({ name, email, message }: { name: string; email: string; message: string }) {
+  const apiKey = process.env.RESEND_API_KEY
+  if (!apiKey) {
+    console.log("[CV Request] No RESEND_API_KEY set. Skipping email notification.")
+    return
+  }
+
+  const adminEmail = process.env.ADMIN_EMAIL || "nathuminijayathilake@outlook.com"
+  const subject = `CV Request from ${name}`
+  const body = [
+    `Name: ${name}`,
+    `Email: ${email}`,
+    `Message: ${message || "(none)"}`,
+    `---`,
+    `Sent from your portfolio CV request form.`,
+  ].join("\n")
+
+  try {
+    const res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: `Portfolio Contact <onboarding@resend.dev>`,
+        to: adminEmail,
+        subject,
+        text: body,
+      }),
+    })
+    if (!res.ok) {
+      const err = await res.text()
+      console.error("[CV Request] Resend error:", err)
+    } else {
+      console.log("[CV Request] Email notification sent to", adminEmail)
+    }
+  } catch (err) {
+    console.error("[CV Request] Failed to send email:", err)
+  }
+}
+
 export async function POST(req: NextRequest) {
   const { name, email, message } = await req.json()
   if (!name || !email) {
     return NextResponse.json({ error: "Name and email are required" }, { status: 400 })
   }
 
-  const requests = await getRequests()
-  requests.push({
+  const entry = {
     id: Date.now(),
     name,
     email,
     message: message || "",
     requestedAt: new Date().toISOString(),
-  })
-  await saveRequests(requests)
+  }
+
+  const requests = await getRequests()
+  requests.push(entry)
+  await saveRequests(requests).catch(() => {})
+
+  await sendEmailNotification({ name, email, message })
 
   return NextResponse.json({ success: true })
 }

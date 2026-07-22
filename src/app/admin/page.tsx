@@ -239,6 +239,7 @@ function CVRequests() {
   const [requests, setRequests] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
   const token = typeof window !== "undefined" ? localStorage.getItem("admin_token") : null
+  const emailTarget = typeof window !== "undefined" && window.location.origin.includes("localhost") ? "Check console" : "Your inbox"
 
   useEffect(() => {
     if (!token) return
@@ -249,20 +250,31 @@ function CVRequests() {
   }, [token])
 
   if (loading) return <p className="text-xs text-[#5a5a6a]">Loading...</p>
-  if (requests.length === 0) return <p className="text-xs text-[#5a5a6a]">No CV requests yet.</p>
 
   return (
-    <div className="space-y-2">
-      {requests.map((r) => (
-        <div key={r.id} className="rounded-lg border border-[rgba(255,255,255,0.06)] bg-[rgba(255,255,255,0.02)] p-4">
-          <div className="flex items-center justify-between mb-1">
-            <span className="text-sm font-medium text-white">{r.name}</span>
-            <span className="font-mono text-[10px] text-[#5a5a6a]">{new Date(r.requestedAt).toLocaleDateString()}</span>
-          </div>
-          <a href={`mailto:${r.email}`} className="text-xs text-[#d4a555]/60 hover:text-[#d4a555]">{r.email}</a>
-          {r.message && <p className="mt-1 text-xs text-[#8a8a9a]">{r.message}</p>}
+    <div>
+      <p className="mb-4 text-xs text-[#7a7a8a]">
+        <span className="inline-flex items-center gap-1.5 rounded bg-[#d4a555]/10 px-2.5 py-1 text-[#d4a555]">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email notifications &rarr; {emailTarget}
+        </span>
+      </p>
+      {requests.length === 0 ? (
+        <p className="text-xs text-[#5a5a6a]">No CV requests yet.</p>
+      ) : (
+        <div className="space-y-2">
+          {requests.map((r) => (
+            <div key={r.id} className="rounded-lg border border-[rgba(255,255,255,0.06)] bg-[rgba(255,255,255,0.02)] p-4">
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-sm font-medium text-white">{r.name}</span>
+                <span className="font-mono text-[10px] text-[#5a5a6a]">{new Date(r.requestedAt).toLocaleDateString()}</span>
+              </div>
+              <a href={`mailto:${r.email}`} className="text-xs text-[#d4a555]/60 hover:text-[#d4a555]">{r.email}</a>
+              {r.message && <p className="mt-1 text-xs text-[#8a8a9a]">{r.message}</p>}
+            </div>
+          ))}
         </div>
-      ))}
+      )}
     </div>
   )
 }
