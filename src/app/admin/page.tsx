@@ -239,7 +239,6 @@ function CVRequests() {
   const [requests, setRequests] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
   const token = typeof window !== "undefined" ? localStorage.getItem("admin_token") : null
-  const emailTarget = typeof window !== "undefined" && window.location.origin.includes("localhost") ? "Check console" : "Your inbox"
 
   useEffect(() => {
     if (!token) return
@@ -253,12 +252,6 @@ function CVRequests() {
 
   return (
     <div>
-      <p className="mb-4 text-xs text-[#7a7a8a]">
-        <span className="inline-flex items-center gap-1.5 rounded bg-[#d4a555]/10 px-2.5 py-1 text-[#d4a555]">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          Email notifications &rarr; {emailTarget}
-        </span>
-      </p>
       {requests.length === 0 ? (
         <p className="text-xs text-[#5a5a6a]">No CV requests yet.</p>
       ) : (

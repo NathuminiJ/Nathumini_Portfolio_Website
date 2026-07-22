@@ -1,23 +1,16 @@
 import { NextRequest, NextResponse } from "next/server"
-import { readFile, writeFile, mkdir } from "fs/promises"
-import path from "path"
+import { Redis } from "@upstash/redis"
 
-const requestsFile = path.join(process.cwd(), "data", "cv-requests.json")
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "admin123"
 
-async function getRequests(): Promise<any[]> {
-  try {
-    const data = await readFile(requestsFile, "utf-8")
-    return JSON.parse(data)
-  } catch {
-    return []
-  }
+function getRedis(): Redis | null {
+  const url = process.env.UPSTASH_REDIS_REST_URL
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN
+  if (url && token) return new Redis({ url, token })
+  return null
 }
 
-async function saveRequests(requests: any[]) {
-  await mkdir(path.dirname(requestsFile), { recursive: true })
-  await writeFile(requestsFile, JSON.stringify(requests, null, 2))
-}
+const KEY = "cv_requests"
 
 function isAuthorized(req: NextRequest): boolean {
   const auth = req.headers.get("authorization")
@@ -47,9 +40,14 @@ export async function POST(req: NextRequest) {
     requestedAt: new Date().toISOString(),
   }
 
-  const requests = await getRequests()
-  requests.push(entry)
-  await saveRequests(requests).catch(() => {})
+  const redis = getRedis()
+  if (redis) {
+    const requests = (await redis.get<any[]>(KEY)) || []
+    requests.push(entry)
+    await redis.set(KEY, requests)
+  } else {
+    console.log("[CV Request] No UPSTASH_REDIS configured. Entry saved to log:", entry)
+  }
 
   return NextResponse.json({ success: true })
 }
@@ -58,6 +56,12 @@ export async function GET(req: NextRequest) {
   if (!isAuthorized(req)) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
   }
-  const requests = await getRequests()
-  return NextResponse.json(requests)
+
+  const redis = getRedis()
+  if (redis) {
+    const requests = (await redis.get<any[]>(KEY)) || []
+    return NextResponse.json(requests)
+  }
+
+  return NextResponse.json([])
 }
