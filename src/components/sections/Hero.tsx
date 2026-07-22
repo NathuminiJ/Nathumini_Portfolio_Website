@@ -19,17 +19,15 @@ function Greeting() {
 }
 
 function FloatingDots() {
-  const [dots] = useState(() =>
-    Array.from({ length: 15 }, (_, i) => ({
-      id: i,
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      size: Math.random() * 2.5 + 1,
-      delay: Math.random() * 6,
-      duration: Math.random() * 5 + 5,
-      opacity: Math.random() * 0.2 + 0.05,
-    }))
-  )
+  const dots = Array.from({ length: 15 }, (_, i) => ({
+    id: i,
+    x: (i * 17 + 5) % 95 + 2,
+    y: (i * 23 + 11) % 90 + 5,
+    size: ((i * 7 + 3) % 5) * 0.5 + 1,
+    delay: (i % 6) * 0.8,
+    duration: (i % 5) + 5,
+    opacity: ((i * 3 + 1) % 10) * 0.018 + 0.04,
+  }))
 
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -88,12 +86,8 @@ export default function Hero() {
   const ref = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] })
   const y = useTransform(scrollYProgress, [0, 1], [0, 80])
-  const [mounted, setMounted] = useState(false)
-  useEffect(() => { setMounted(true) }, [])
 
   const scroll = () => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
-
-  if (!mounted) return null
 
   return (
     <section id="hero" ref={ref} className="relative flex min-h-screen items-center justify-center overflow-hidden">
