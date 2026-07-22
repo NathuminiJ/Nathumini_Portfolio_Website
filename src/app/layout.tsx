@@ -84,7 +84,8 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/LOGO.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/LOGO.png" />
       </head>
       <body className="min-h-full bg-[#f8f7f5] text-[#1a1a1a]">
         <ClientLayout>{children}</ClientLayout>
